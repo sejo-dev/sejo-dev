@@ -1,0 +1,30 @@
+---
+const works = [
+    {
+      title: "Globons | The Digital Innovation Company",
+      description:
+        "Desarrollador Web desde 2019.",
+      link: "https://www.linkedin.com/company/globons/about/",
+      logo: 'https://media.licdn.com/dms/image/C560BAQHiMoOTCuIoLQ/company-logo_200_200/0/1631395686990?e=2147483647&v=beta&t=WvpEnEm7zCvoE4PFD5WfoF-pcBieGFKjwwMuBuDMX6M'
+    }
+]
+
+---
+<div class="py-3 max-w-md mx-auto sm:max-w-xl flex justify-center items-center">
+  <div class="text-center text-white">
+    <h1 class="custom-title mb-3">Experiencia</h1>
+    <!-- pasar a un componente falta algun texto aca que diga trabaje en..-->
+    {works.map(work => (
+      <div class="flex items-center">
+        <div class="logo">
+          <img src={work.logo} alt={work.title} class="rounded-full w-20 mr-3"/>
+        </div>
+        <div class="text-left px-1">
+          <p class="text-xl font-semibold mb-1">{work.title}</p>
+          <p class="text-gray-200">{work.description}</p>
+        </div>
+      </div>
+    ))
+  }
+  </div>
+</div>

@@ -1,0 +1,20 @@
+---
+import profile from '../../public/profile.png'
+import { calculateYears } from '../utils/datesUtils';
+const date = '2015-1-01';
+const years = calculateYears(date);
+---
+
+<div class="flex h-screen justify-center items-center">
+    <div class="text-center text-white w-11/12 lg:w-1/2">
+      <img src={profile.src} alt="Profile image" class="rounded-full m-auto mb-4 h-40 w-40 object-cover">
+      <h1 class="text-4xl font-extrabold tracking-wider lg:text-5xl lg:leading-tight"><span class="custom-class">Hola, soy Sergio,</span> Full Stack Developer.</h1>
+      <p class="mt-5 text-xl">Desarrollador Web con más de {years} años de experiencia.</p>
+      <div class="mt-9">
+        <a href="https://www.linkedin.com/in/sergio-balanda-44aa6548/" target="_blank" class="py-4 px-8 shadow-md rounded-full bg-white text-black shadow-gray-700 hover:bg-gray-300">Linkedin</a>
+      </div>
+    </div>
+  </div>
+<style>
+
+</style>

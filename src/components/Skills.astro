@@ -1,0 +1,55 @@
+---
+import React from '../../public/react.svg'
+import Node from '../../public/node.svg'
+import C from '../../public/c.svg'
+import Laravel from '../../public/laravel.svg'
+import Sql from '../../public/sql.svg'
+
+const technologies = [
+  {
+    name: "React.js",
+    icon: React.src,
+  },
+  {
+    name: "Node.js",
+    icon:  Node.src ,
+  },
+  {
+    name: "Laravel",
+    icon: Laravel.src,
+  },
+  {
+    name: "C#",
+    icon: C.src,
+  },
+  {
+    name: "Sql",
+    icon: Sql.src,
+  }
+];
+---
+
+<div
+  class="py-3 max-w-md mx-auto text-white text-center sm:max-w-xl lg:max-w-4xl"
+>
+  <h1 class="custom-title mb-3">Tecnologías</h1>
+  <div class="grid gap-4 grid-cols-3 md:grid-cols-3 grid-rows-2">
+    {
+      technologies.map((tecnology) => (
+        <div class="item-content">
+          <img src={tecnology.icon} width="50" height="50" />
+          <p>{tecnology.name}</p>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
